@@ -1,5 +1,5 @@
 import Request from './lib/Request.js';
-import RestRequest from './lib/RestRequest.js';
+import JsonRequest from './lib/JsonRequest.js';
 
 
 /**
@@ -9,6 +9,6 @@ module.exports = {
 // Network XHR
 	Request: Request,
 
-// REST single request client
-	RestRequest: RestRequest
+// JSON single request client
+	JsonRequest: JsonRequest
 };
