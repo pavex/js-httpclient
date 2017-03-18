@@ -61,7 +61,7 @@ export default class Request {
  * @param {XMLHttpRequest=} opt_xhrClass
  */
 	constructor(opt_xhrClass) {
-		this._xhrClass = opt_xhr || XMLHttpRequest;
+		this._xhrClass = opt_xhrClass || XMLHttpRequest;
 	};
 
 
