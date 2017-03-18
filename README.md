@@ -43,7 +43,7 @@ r.setParams({});
 
 // Add content type in classic way
 if (xhr == XMLHttpRequest) {
-	r.setHeader('content-type', 'application\json');
+	r.setHeader('content-type', 'application/json');
 }
 
 r.onSuccess(() => {
