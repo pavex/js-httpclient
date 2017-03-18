@@ -1,0 +1,29 @@
+{
+  "name": "publixe-httpclient",
+  "version": "1.0.0",
+  "description": "Simple and powerfull http client for JSON like a Google APIs style",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pavex/publixe-httpclient.git"
+  },
+  "keywords": [
+    "client",
+    "http",
+    "json",
+    "rest",
+    "xmlhttprequest",
+    "react",
+    "reactnative",
+    "javascript"
+  ],
+  "author": "pavex",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pavex/publixe-httpclient/issues"
+  },
+  "homepage": "https://github.com/pavex/publixe-httpclient#readme"
+}
