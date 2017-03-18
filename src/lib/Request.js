@@ -10,6 +10,10 @@ export default class Request {
 
 
 /** @private @type {XMLHttpRequest} */
+	_xhrClass;
+
+
+/** @private @type {XMLHttpRequest} */
 	_xhr;
 
 
@@ -54,14 +58,26 @@ export default class Request {
 
 /**
  * @constructor
- * @param {XMLHttpRequest=} opt_xhr
+ * @param {XMLHttpRequest=} opt_xhrClass
  */
-	constructor(opt_xhr) {
-		var xhr = opt_xhr || XMLHttpRequest;
-		this._xhr = new xhr();
-		this._xhr.onload = this._loadEvent.bind(this);
-		this._xhr.ontimeout = this._loadEvent.bind(this);
-		this._xhr.onerror = this._loadEvent.bind(this);
+	constructor(opt_xhrClass) {
+		this._xhrClass = opt_xhr || XMLHttpRequest;
+	};
+
+
+
+
+
+/**
+ * @private 
+ * @return {XMLHttpRequest}
+ */
+	_createXMLHttpRequest() {
+		xhr = new this._xhrClass();
+		xhr.onload = this._loadEvent.bind(this);
+		xhr.ontimeout = this._loadEvent.bind(this);
+		xhr.onerror = this._loadEvent.bind(this);
+		return xhr;
 	};
 
 
@@ -355,7 +371,6 @@ export default class Request {
  * @return {EventType}
  */
 	_loadEvent(e) {
-
 		this.response_ = null;
 		this.lastError_ = null;
 //
@@ -440,6 +455,7 @@ export default class Request {
 	send() {
 		try {
 			this._response = null;
+			this._xhr = this._createXMLHttpRequest();
 			this._xhr.open(this._method, this._getRequestUrl());
 			this._xhr.withCredentials = false;
 
@@ -457,6 +473,7 @@ export default class Request {
 			this._xhr.send(content);
 		}
 		catch (message) {
+console.warn('send error', message);
 			this._doError(message);
 		}
 	};
