@@ -73,7 +73,7 @@ export default class Request {
  * @return {XMLHttpRequest}
  */
 	_createXMLHttpRequest() {
-		xhr = new this._xhrClass();
+		var xhr = new this._xhrClass();
 		xhr.onload = this._loadEvent.bind(this);
 		xhr.ontimeout = this._loadEvent.bind(this);
 		xhr.onerror = this._loadEvent.bind(this);
@@ -174,7 +174,9 @@ export default class Request {
  * @param {string|Array}
  */
 	setParam(name, value) {
-		this._params[name] = value;
+		if (value !== undefined) {
+			this._params[name] = value;
+		}
 	};
 
 
