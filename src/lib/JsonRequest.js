@@ -69,10 +69,21 @@ export default class JsonRequest extends Request {
 
 
 /**
- * @return {Array<Object>}
+ * @return {Array<Object>|Object|number|int}
  */
 	getData() {
 		return this.getResponse().data || null;
+	};
+
+
+
+
+
+/**
+ * @return {Array<Object>}
+ */
+	getItems() {
+		return this.getData() || [];
 	};
 
 
