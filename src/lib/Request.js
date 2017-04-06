@@ -279,8 +279,10 @@ export default class Request {
 		if (this._method === Request.Method.GET) {
 			var s = '';
 			for (var i in this._params) {
-				s += s ? '&' : '';
-				s += i + '=' + encodeURIComponent(this._params[i]);
+				if (this._params.hasOwnProperty(i)) {
+					s += s ? '&' : '';
+					s += i + '=' + encodeURIComponent(this._params[i]);
+				}
 			}
 			url += (s ? '?' : '') + s;
 		}
@@ -464,7 +466,9 @@ export default class Request {
 // Update headers
 			this._xhr.setRequestHeader('Accept', this._contentType);
 			for (var i in this._headers) {
-				this._xhr.setRequestHeader(i, this._headers[i]);
+				if (this._headers.hasOwnProperty(i)) {  
+					this._xhr.setRequestHeader(i, this._headers[i]);
+				}
 			}
 // Content
 			var content = null;
