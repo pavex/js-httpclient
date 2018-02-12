@@ -28,11 +28,8 @@
   },
   "homepage": "https://github.com/pavex/publixe-httpclient#readme",
   "devDependencies": {
-<<<<<<< HEAD
-=======
     "babel-cli": "^6.24.0",
     "babel-plugin-transform-class-properties": "^6.23.0",
     "babel-preset-es2015": "^6.24.0"
->>>>>>> 418ff1373b8945688fb87acdbc87298a2de79866
   }
 }

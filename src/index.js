@@ -1,14 +1,18 @@
-import Request from './lib/Request.js';
-import JsonRequest from './lib/JsonRequest.js';
+import HttpClient from './HttpClient.js';
+import JsonRpc from './JsonRpc.js';
 
 
 /**
  */
-module.exports = {
+export {
+	HttpClient,
+	JsonRpc
+};
 
-// Network XHR
-	Request: Request,
 
-// JSON single request client
-	JsonRequest: JsonRequest
+/**
+ */
+export default {
+	HttpClient,
+	JsonRpc
 };
