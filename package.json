@@ -2,9 +2,10 @@
   "name": "publixe-httpclient",
   "version": "0.0.3",
   "description": "HTTP JSON client for React and React Native application",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src --presets babel-preset-es2015 --out-dir dist"
   },
   "repository": {
     "type": "git",
@@ -25,5 +26,7 @@
   "bugs": {
     "url": "https://github.com/pavex/publixe-httpclient/issues"
   },
-  "homepage": "https://github.com/pavex/publixe-httpclient#readme"
+  "homepage": "https://github.com/pavex/publixe-httpclient#readme",
+  "devDependencies": {
+  }
 }
