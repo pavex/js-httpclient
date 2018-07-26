@@ -1,15 +1,15 @@
-# publixe-httpclient
+# js-httpclient
 Simple XML HTTP Requester for Node.js special for React and React Native applications based on XMLHttpRequest
 
 No long explanation, here are examples:
 
 ```js
-import {HttpClient} from 'publixe-httpclient';
+import {HttpClient} from 'js-httpclient';
 
 var client = new HttpClient();
 var r = new HttpClient.Request();
 
-r.setUrl('https://raw.githubusercontent.com/pavex/publixe-httpclient/master/samples/sample.json');
+r.setUrl('https://raw.githubusercontent.com/pavex/js-httpclient/master/samples/sample.json');
 r.setContentType('application/json');
 r.setMethod('GET');
 r.setParams({});
@@ -35,7 +35,7 @@ import {JsonRequest} from 'publixe-httpclient';
 var xhr = GLOBAL.originalXMLHttpRequest	? GLOBAL.originalXMLHttpRequest : XMLHttpRequest;
 var r = new JsonRequest(xhr);
 
-r.setUrl('https://raw.githubusercontent.com/pavex/publixe-httpclient/master/samples/sample.json');
+r.setUrl('https://raw.githubusercontent.com/pavex/js-httpclient/master/samples/sample.json');
 r.setContentType('application/json');
 r.setMethod('GET');
 r.setParams({});
