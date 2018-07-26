@@ -1,5 +1,5 @@
 {
-  "name": "publixe-httpclient",
+  "name": "js-httpclient",
   "version": "0.0.3",
   "description": "HTTP JSON client for React and React Native application",
   "main": "src/index.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pavex/publixe-httpclient.git"
+    "url": "git+https://github.com/pavex/js-httpclient.git"
   },
   "keywords": [
     "client",
@@ -21,12 +21,12 @@
     "reactnative",
     "javascript"
   ],
-  "author": "Pavel Macháček <pavex@ines.cz> (http://blog.ines.cz)",
+  "author": "Pavel Macháček <pavex@ines.cz>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/pavex/publixe-httpclient/issues"
+    "url": "https://github.com/pavex/js-httpclient/issues"
   },
-  "homepage": "https://github.com/pavex/publixe-httpclient#readme",
+  "homepage": "https://github.com/pavex/js-httpclient#readme",
   "devDependencies": {
     "babel-cli": "^6.24.0",
     "babel-plugin-transform-class-properties": "^6.23.0",
